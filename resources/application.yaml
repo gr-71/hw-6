@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  mvc:
+    static-path-pattern: /statico/**
+  jpa:
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://localhost:3306/article?serverTimezone=UTC
+    username: root
+    password: root
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, beans, mappings
